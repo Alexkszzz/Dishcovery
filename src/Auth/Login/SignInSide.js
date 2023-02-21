@@ -14,6 +14,7 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth, signInWithGoogle } from '../../firebase-config';
+import GoogleIcon from '@mui/icons-material/Google';
 
 function Copyright(props) {
     return (
@@ -124,7 +125,7 @@ export default function SignInSide() {
                                 sx={{ mt: 3, mb: 2 }}
                                 onClick={signInWithGoogle}
                             >
-                                Sign In with Google
+                                Sign In with Google <GoogleIcon/>
                             </Button>
                             <Grid container>
                                 <Grid item xs>

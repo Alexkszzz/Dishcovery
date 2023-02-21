@@ -13,6 +13,8 @@ import SignInSide from './Login/SignInSide';
 import SignUp from './Signup/SignUp';
 import Newsfeed from '../Feeds/Newsfeed';
 import LeftSidebar from '../components/leftSideBar';
+import RightSidebar from '../components/rightSideBar';
+import Profile from '../components/profile';
 
 export default function Authenticate() {
     const [registerEmail, setRegisterEmail] = useState("");
@@ -37,7 +39,7 @@ export default function Authenticate() {
             <Routes>
                 <Route path="/" element={<SignInSide />} />
                 <Route path="/signup" element={<SignUp />} />
-                <Route path="/home" element={<LeftSidebar />} />
+                <Route path="/home" element={<Profile />} />
             </Routes>
         </Router>
     )
