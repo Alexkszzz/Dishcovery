@@ -19,6 +19,8 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import { Link, NavLink } from "react-router-dom";
+import Modal from "./Modal";
+import { Label } from "@mui/icons-material";
 
 export default function LeftSidebar() {
     const theme = useTheme();
@@ -182,6 +184,7 @@ export default function LeftSidebar() {
                     >
                         Post
                     </Button>
+
                 </Hidden>
                 <Hidden lgUp>
                     <IconButton
@@ -199,7 +202,7 @@ export default function LeftSidebar() {
                     </IconButton>
                 </Hidden>
             </Box>
-            {/* {openModal && (
+            {openModal && (
                 <Modal
                     open={openModal}
                     handleClose={handleModalClose}
@@ -207,18 +210,16 @@ export default function LeftSidebar() {
                 >
                     <Box>
                         <Grid container>
-                            <Grid item>
-                                <img src="/logo.png" alt="logo" width="60px" />
-                            </Grid>
                             <Grid item flexGrow="1">
                                 <Box padding=".5rem 0">
+                                    <Label>Dish name</Label>
                                     <Input
 
                                         multiline
-                                        rows="2"
+                                        rows="1"
                                         disableUnderline
                                         type="text"
-                                        placeholder="What's happening?"
+                                        placeholder="What's the dish name?"
                                         sx={{ width: "100%" }}
                                     />
                                 </Box>
@@ -226,7 +227,7 @@ export default function LeftSidebar() {
                         </Grid>
                     </Box>
                 </Modal>
-            )} */}
+            )}
         </>
     );
 }
